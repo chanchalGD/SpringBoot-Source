@@ -6,15 +6,16 @@
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-build</artifactId>
 	<version>${revision}</version>
-    <modules>
-        <module>spring-boot-mytest</module>
-    </modules>
-    <packaging>pom</packaging>
+	<modules>
+		<module>demo</module>
+	</modules>
+	<packaging>pom</packaging>
 	<name>Spring Boot Build</name>
 	<description>Spring Boot Build</description>
 	<properties>
 		<revision>2.2.9.RELEASE</revision>
 		<main.basedir>${basedir}</main.basedir>
+		<disable.checks>true</disable.checks>
 	</properties>
 	<!-- Most elements are in profiles so they are stripped out during maven-flatten -->
 	<profiles>
@@ -29,6 +30,7 @@
 			<properties>
 				<spring-javaformat.version>0.0.22</spring-javaformat.version>
 				<nohttp-checkstyle.version>0.0.4.RELEASE</nohttp-checkstyle.version>
+				<disable.checks>true</disable.checks>
 			</properties>
 			<build>
 				<plugins>
